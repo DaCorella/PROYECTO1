@@ -1,12 +1,80 @@
 body{
-    background: url(../imagenes/holauwu.jpg);
-    background-size: cover;
-    
+    background:url(../imagen/uno.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1{
+    background: orchid;
+    font-family: cursive;
+}
+
+
+.fr1{
+    display:flex ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    flex-direction:column;
+    align-items: center;
+    border: 10px solid rgb(7, 70, 129);
+    padding: 50px ;
+    width: 400px;
+    background: cornsilk;
+}
+
+.btn1{
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid blueviolet;
+    background: rgb(37, 233, 30);
+}
+
+.cla1{
+    display: flex;
+    color: rgb(0, 0, 0);
+
+}
+
+.label1,.cla2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+
+
+}
+
+.cla2{
+    margin-left: 10px;
+    #background: royalblue;
+
+
+
+}
+
+.bts{
+    display: flex;
+    margin-top: 20px;
+
+}
+
+button{
+    color: blue;
+
+
+}
+
+input[type="button"]{
+    color: crimson;
+    background:blue;
+    border:1px solid black;
 }
 
 .menu{
     width: 100%;
-    background: rgb(61, 193, 233);
+    background: black;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -25,39 +93,12 @@ body{
 .menu li a:hover{
     background: rgb(227, 229, 230);
     color: rgb(16, 147, 173);
-  
+
 }
 
 ul{
     font-size: 50px;
-    
-}
 
-.par{
-    background:rgb(32, 211, 166);
-    color: rgb(255, 255, 255);
-    width: 20%;
-    border: 3px solid rgb(41, 86, 170);
-    padding: 1%;
-    font-size: 20px;
-    font-family: cursive;   
-}
-
-.par:hover{
-    background: rosybrown;
-    color: rebeccapurple;
-    
-
-}
-
-
-.par{
-    position:relative;
-    left:0 ;
-    right:0 ;
-    top: 0;
-    bottom: 0;
-    
 }
 
 
@@ -76,5 +117,15 @@ ul{
     padding: 10px 20px;
 }
 
+.label1{
+    padding: 10px;
+    #background: rgb(255, 255, 255);
+    border: 5px ;
+    font-family: cursive;
+}
 
-
+.hola{
+    #background: aqua;
+    color: black;
+    background-position:center;
+}

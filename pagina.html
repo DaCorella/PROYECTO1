@@ -4,41 +4,66 @@
 		<title>
 			Bienvenido a mi sitio Web
 		</title>
-        <script src="../proyecto/javasc/java.js"></script>
-        <link rel="stylesheet" type="text/css" href="styles/styless.css"/>
-	</head>
+    <script language="javascript" type="text/javascript" src="{{url_for('static',filename='js/javas.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estilos.css')}}"/>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deber</title>
+</head>
+<body>
+<div id="header">
+    <ul class="menu">
+        <li><a href="#">Inicio</a>
+            <ul>
+                <li><a href="#">Estamos trabajando en ello :v</a></li>
 
 
-	<body>
-        <div id="header">
-            <ul class="menu">
-                <li><a href="#">Inicio</a>
-                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Inicio</a></li>
-
-
-                 </ul></li>
-                 <li><a target="_blank" href="file:///D:/htmlnose/proyecto/url/registro.html">Registro</a></li>
-                 <li><a target="_blank" href="https://www.facebook.com/ElChoko-Krispis-610843642904202/">Facebook</a></li>
-                 <li><a href="#">Youtube</a></li>
-                 <li><a href="#">Contacto</a>
-                 <ul>
-                    <li><a target="_blank" href="file:///D:/htmlnose/factura.html">Factura</a></li>
-                    <li><a href="file:///C:/Users/alexi/Desktop/formulario-css-grid-master/index.html">Registro 2 </a></li>
-                    <li><a href="#">Inicio</a></li>
-                  </ul>
-                </li>
             </ul>
+        </li>
+        <li><a target="_blank" href="https://www.facebook.com/byronjavier.solisparrales">Facebook</a></li>
+        <li><a href="#">Youtube</a></li>
+        <li><a href="#">Contacto</a>
+            <ul>
+                <li><a target="_blank" href="#">09863929820</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<form class="fr1" id="frm" action="{{ url_for('getDatos') }}"
+     method="post"  onload="limpiarFormulario()">
+    <div class="cla1">
+        <div class="label1">
+            <label class="cl1" for="nombre">Ingrese el nombre del paciente</label><br>
+            <label class="cl1" for="valor">Ingrese su peso en kg</label><br>
+            <label class="cl1" for="lib">Peso en Libras</label><br>
+            <label class="cl1" for="gra">Peso en Gramos</label><br>
+            <label class="cl1" for="ton">Peso en Toneladas</label><br>
+
         </div>
 
-        <div>
-            <p class="par">
-                Genshin Impact es un juego de acción ARPG de mundo abierto free-to-play<br> con una mecánica de 
-                monetización de Gacha para conseguir elementos adicionales <br> como personajes especiales y armas. 
-                Es el tercer videojuego desarrollado por miHoYo,<br> tras Gun GirlZ y Honkai Impact 3rd.
-            </p>
+        <div class="cla2">
+            <input type="text" placeholder="Escribe tu nombre" maxlength="50" name="nombre" id="nombre">
+            <input type="text" placeholder="Ingrese el valor" maxlength="50" name="valor" id="valor" onkeyup="calculo()">
+            <input type="text" maxlength="50" name="libra" id="lib" disabled value="0.00">
+            <input type="text" maxlength="50" name="gramos" id="gra" disabled value="0.00">
+            <input type="text" maxlength="50" name="toneladas" id="ton" disabled value="0.00">
+
+
         </div>
-	</body>
+
+
+    </div>
+    <div class="bts">
+
+        <input class="eve1" type="button" value="Mostrar Peso" onclick="calculo()"/>
+
+
+    </div>
+
+</form>
+
+</body>
 </html>
